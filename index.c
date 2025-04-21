@@ -27,7 +27,17 @@ int main(){
         printf("esquerda\n"); //imprime a direção
         r++;
     } while (r < 8);
-    
+
+    //Cavalo, Movimentação em L (cima, cima, direita)
+
+    for (int i = 0; i < 1; i++) {
+        int j = 0;
+        while (j < 2) {
+            printf("cima\n");
+            j++;
+        }
+        printf("direita\n");
+    }
 
 
     
