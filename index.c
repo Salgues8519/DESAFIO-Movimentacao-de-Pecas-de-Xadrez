@@ -1,32 +1,40 @@
 #include <stdio.h>
 
+void torre(int t){
+    if (t < 5){
+        printf("Direita\n");
+
+        torre(t + 1);
+    }
+}
+
+void bispo(int b){
+    if(b < 5){
+        printf("cima, direita\n");
+
+        bispo(b + 1);
+    }
+}
+
+void rainha(int r){
+    if(r < 8){
+        printf("esquerda\n");
+
+        rainha( r + 1);
+    }
+}
+
 int main(){
     
-    //Torre, cinco casas a direita
-    for (int t = 0; t < 5; t++){
+int movimentoTorre = 0;
+    torre(movimentoTorre);
 
-        printf("direita\n"); //imprime a direção
-    }
+int movimentoBispo = 0;
+    bispo(movimentoBispo);
 
-    int b = 0;
+int movimentoRainha = 0;
+    rainha(movimentoRainha);
 
-
-    //Bispo, cinco casas na diagonal cima, direita
-    while (b < 5)
-    {
-        printf("cima, direita\n"); //imprime a direção
-        b++;
-    }
-    
-
-    //Rainha, oito casas para esquerda
-    int r = 0;
-    
-    do
-    {
-        printf("esquerda\n"); //imprime a direção
-        r++;
-    } while (r < 8);
 
     //Cavalo, Movimentação em L (cima, cima, direita)
 
@@ -38,8 +46,6 @@ int main(){
         }
         printf("direita\n");
     }
-
-
     
     
     return 0;
